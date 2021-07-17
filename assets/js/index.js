@@ -36,3 +36,10 @@ const getAreaCylinder = function (h, R) {
   }
   return 2 * PI * R * (h + R);
 };
+
+const getAreaTriangle = function (a, h) {
+  if (isNaN(a - h) || a <= 0 || h <= 0) {
+    return null;
+  }
+  return 0.5 * a * h;
+};
