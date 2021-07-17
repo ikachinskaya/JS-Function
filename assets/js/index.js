@@ -22,3 +22,9 @@ const isTriangle = function (a, b, c) {
   return false;
 };
 
+const getAreaRhombus = function (a, h) {
+  if (isNaN(a - h) || a <= 0 || h <= 0) {
+    return null;
+  }
+  return a * h;
+};
