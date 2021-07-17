@@ -28,3 +28,11 @@ const getAreaRhombus = function (a, h) {
   }
   return a * h;
 };
+
+const PI = 3.14;
+const getAreaCylinder = function (h, R) {
+  if (isNaN(h - R) || h <= 0 || R <= 0) {
+    return null;
+  }
+  return 2 * PI * R * (h + R);
+};
