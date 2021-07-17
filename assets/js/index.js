@@ -43,3 +43,10 @@ const getAreaTriangle = function (a, h) {
   }
   return 0.5 * a * h;
 };
+
+const getAreaRectangle = function (a, b) {
+  if (isNaN(a - b) || a <= 0 || b <= 0) {
+    return null;
+  }
+  return a * b;
+};
