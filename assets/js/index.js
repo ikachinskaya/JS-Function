@@ -64,3 +64,23 @@ const isPrimeNumber = function (number) {
   if (i < number) return false;
   else return true;
 };
+
+const getPowerNumber = function (number, power) {
+  if (isNaN(number - power)) {
+    return null;
+  }
+  if (power === 0) {
+    return 1;
+  }
+  if (power < 0) {
+    number = 1 / number;
+    power *= -1;
+  }
+  
+  let result = 1;
+
+  for (let i = 1; i <= power; i++) {
+    result *= number;
+  }
+  return result;
+};
