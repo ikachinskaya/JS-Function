@@ -50,3 +50,17 @@ const getAreaRectangle = function (a, b) {
   }
   return a * b;
 };
+
+const isPrimeNumber = function (number) {
+  if (isNaN(number) || number <= 1 || !Number.isInteger(number)) {
+    return null;
+  }
+  let i = 2;
+  for (i = 2; i < number; i++) {
+    if (number % i === 0) {
+      break;
+    }
+  }
+  if (i < number) return false;
+  else return true;
+};
