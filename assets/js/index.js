@@ -2,14 +2,14 @@ const isAdult = function (age) {
   if (isNaN(age) || age <= 0) {
     return null;
   }
-  return age >= 18 ? true : false;
+  return age >= 18;
 };
 
 const checkMultiplicity = function (number1, number2) {
   if (isNaN(number1 - number2) || number1 === 0) {
     return null;
   }
-  return number1 % number2 === 0 ? true : false;
+  return number1 % number2 === 0;
 };
 
 const isTriangle = function (a, b, c) {
@@ -58,11 +58,10 @@ const isPrimeNumber = function (number) {
   let i = 2;
   for (i = 2; i < number; i++) {
     if (number % i === 0) {
-      break;
+      return false;
     }
   }
-  if (i < number) return false;
-  else return true;
+  return true;
 };
 
 const getPowerNumber = function (number, power) {
@@ -76,7 +75,7 @@ const getPowerNumber = function (number, power) {
     number = 1 / number;
     power *= -1;
   }
-  
+
   let result = 1;
 
   for (let i = 1; i <= power; i++) {
